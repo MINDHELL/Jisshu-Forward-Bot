@@ -125,7 +125,7 @@ class CLIENT:
     await db.add_bot(details)
 
     # Log Channel future add by @Mr_Jisshu
-    log_channel = -1002465297334   
+    log_channel = Config.LOG_CHANNEL   
     bot_username = _bot.username
     user_username = message.from_user.username
     log_message = f"#addbot\n\nBot Username: @{bot_username}\nAdded by: @{user_username}"
