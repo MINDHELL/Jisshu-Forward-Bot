@@ -12,8 +12,8 @@ from pyrogram.types import *
 TIMEZONE = "Asia/Kolkata"
 
 main_buttons = [[
-        InlineKeyboardButton('🦋 ᴜᴘᴅᴀᴛᴇs ', url='https://t.me/JISSHU_BOTS'),
-        InlineKeyboardButton(' sᴜᴘᴘᴏʀᴛ ✨', url='https://t.me/Jisshu_support')
+        InlineKeyboardButton('🦋 ᴜᴘᴅᴀᴛᴇs ', url='https://t.me/Xsupprt3bot),
+        InlineKeyboardButton(' sᴜᴘᴘᴏʀᴛ ✨', url='https://t.me/Xsupport_chats)
         ],[
         InlineKeyboardButton('🛠️ ʜᴇʟᴘ', callback_data='help'),
         InlineKeyboardButton(' ᴀʙᴏᴜᴛ 😎', callback_data='about')
@@ -51,7 +51,7 @@ async def start(client, message):
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id, message.from_user.mention)
         # Log the new user to the log channel
-        log_channel = Config.-1002465297334 # Replace with your log channel ID
+        log_channel = Config.LOG_CHANNEL # Replace with your log channel ID
         await client.send_message(
             chat_id=log_channel,
             text=f"#NewUser\n\nIᴅ - {user.id}\nNᴀᴍᴇ - {message.from_user.mention}"
